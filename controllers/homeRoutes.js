@@ -1,11 +1,12 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Comment, Post } = require('../models');
 const withAuth = require('../utils/auth');
 
 // TODO: Add a comment describing the functionality of the withAuth middleware
 router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
+      include: [{ model: Comment }],
       attributes: { exclude: ['password'] },
       order: [['name', 'ASC']],
     });
