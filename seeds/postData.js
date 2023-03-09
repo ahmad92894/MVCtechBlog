@@ -11,5 +11,5 @@ const postData = [
       user_id: 2
     }
   ];
-  const seedPostdata = () => Post.bulkCreate(postData);
-  module.exports = seedPostdata;
+  const seedPostData = () => Post.bulkCreate(postData);
+  module.exports = postData;

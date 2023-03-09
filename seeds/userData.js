@@ -1,6 +1,6 @@
 const {User} = require('../models');
-const seedUserdata = async () => {
-    const userData = 
+const userData = async () => {
+    const data = 
 
 
 [
@@ -22,14 +22,14 @@ password:"Password4"
 }
 ]
 try {
-    await User.bulkCreate(userData);
+    await User.bulkCreate(data);
     console.log('User seeded');
 } catch (err) {
     console.error('error seeding user', error);
 }
 };
 
-module.exports = seedUserdata;
+module.exports = userData;
 
 
 

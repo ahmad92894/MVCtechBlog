@@ -4,8 +4,8 @@ const homeRoutes = require('./homeRoutes');
 const postRoutes = require('./api/postRoutes');
 const userRoutes = require('./api/userRoutes');
 
-router.use('/', apiRoutes);
-router.use('/home', homeRoutes);
+router.use('/', homeRoutes);
+router.use('/api', apiRoutes);
 router.use('/posts', postRoutes);
 router.use('/users', userRoutes);
 
