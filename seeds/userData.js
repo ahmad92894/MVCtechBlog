@@ -1,6 +1,6 @@
-const { Module } = require('module');
-const { Model } = require('sequelize');
 const {User} = require('../models');
+const seedUserdata = async () => {
+    const userData = 
 
 
 [
@@ -21,9 +21,15 @@ username:"QueenKanika",
 password:"Password4"
 }
 ]
+try {
+    await User.bulkCreate(userData);
+    console.log('User seeded');
+} catch (err) {
+    console.error('error seeding user', error);
+}
+};
 
-
-Module.exports = seedUserdata;
+module.exports = seedUserdata;
 
 
 
