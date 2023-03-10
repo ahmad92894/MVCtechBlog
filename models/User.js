@@ -32,6 +32,11 @@ User.init(
   },
   {
     hooks: {
+      beforeBulkCreate: async (users) => {
+        users.forEach(async (user) => {
+          user.password = await bcrypt.hash(user.password, 10);
+        });
+      },
       // set up beforeCreate lifecycle "hook" functionality
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
