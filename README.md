@@ -1,5 +1,5 @@
 # MVCtechBlog
 starter code given
 worked in a group
-Heroku link:https://git.heroku.com/powerful-anchorage-29867.git
+Heroku link:https://powerful-anchorage-29867.herokuapp.com/
 ## coded by AHMAD BUSTAMI ## 
